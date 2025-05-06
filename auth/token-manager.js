@@ -58,11 +58,6 @@ function loadTokenCache() {
       console.error(`[DEBUG] Current time: ${now}`);
       console.error(`[DEBUG] Token expires at: ${expiresAt}`);
       
-      if (now > expiresAt) {
-        console.error('[DEBUG] Token has expired');
-        return null;
-      }
-      
       // Update the cache
       cachedTokens = tokens;
       return tokens;
